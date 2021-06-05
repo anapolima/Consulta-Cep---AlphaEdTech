@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cep.css">
+    <title>CEP</title>
+</head>
+<body>
+    <div id="conteiner">
+        <div id="register">
+            <h1 id="title">Cadastre-se</h1>
+
+            <div id="register-user">
+
+                <div class="block">
+                    <label class="label" for="user-name">*Nome completo:</label>
+                    <input class="input" type="text" name="user-name" id="user-name">
+                    <p id="name-message" class="alert"></p>
+                </div>
+
+                <div class="block">
+                    <label class="label" for="user-birth">*Data de nascimento:</label>
+                    <input class="input" type="text" name="user-birth" id="user-birth" placeholder="DD/MM/AAAA" maxlength="10">
+                    <p id="birth-message" class="alert"></p>
+                </div>
+
+                <div class="block">
+                    <label class="label" for="cpf">*CPF:</label>
+                    <input class="input" type="text" name="cpf" id="cpf" placeholder="___.___.___-__" maxlength="14">
+                    <p id="cpf-message" class="alert"></p>
+                </div>
+
+                <div class="block">
+                    <label class="label" for="phone">*Telefone:</label>
+                    <input class="input"type="text" name="phone" id="phone" placeholder="(99) 9 9999-9999" maxlength="16">
+                    <p id="phone-message" class="alert"></p>
+                </div>
+            </div>
+
+            <div id="register-address">
+
+                <div class="block">
+                    <label class="label" for="cep">*CEP:</label>
+                    <input class="input" type="text" name="cep" id="cep" placeholder="00.000-000" maxlength="10">
+                    <p id="cep-message" class="alert"></p>
+                </div>
+
+                <div class="block">
+                    <label class="label" for="state">*Estado:</label>
+                    <select type="text" name="state" id="state">
+                        <option value="null">- Estado -</option>
+                    </select>
+                    <p id="state-message" class="alert"></p>
+                </div>
+
+                <div class="block">
+                    <label class="label" for="city">*Cidade:</label>
+                    <input class="input" type="text" name="city" id="city" list="city-list">
+                        <datalist id="city-list">
+                            
+                        </datalist>
+                    <p id="city-message" class="alert"></p>
+                </div>
+                
+                <div class="block">
+                    <label class="label" for="street">*Logradouro:</label>
+                    <input class="input"type="text" name="rua" id="street" placeholder="Rua, avenida...">
+                    <p id="street-message" class="alert"></p>
+                </div>
+                
+                <div class="block">
+                    <label class="label" for="complement">Complemento:</label>
+                    <input class="input" type="text" name="complement" id="complement" placeholder="Casa, fundos, apt...">
+                </div>
+
+                <div class="block">
+                    <label class="label" for="number">Número:</label>
+                    <input class="input" type="text" name="number" id="number">
+                    <p id="number-message" class="alert"></p>
+                </div>
+
+                <div class="block">
+                    <label class="label" for="district">*Bairro:</label>
+                    <input class="input" type="text" name="district" id="district" list="district-list">
+                        <datalist id="district-list">
+                
+                        </datalist>
+                    <p id="district-message" class="alert"></p>
+                </div>
+
+                </div>
+                <p id="register-alert"></p>
+                <p id="register-button">CADASTRAR</p>
+        </div>
+
+        <div id="iframe-map">
+            <div class="mapouter">
+                <div id="loading">
+                    <p>Carregando...</p>
+                </div>
+                
+                <div class="gmap_canvas">
+                    <iframe width="600" height="725" id="gmap_canvas"
+                    src="https://maps.google.com/maps?q=&t=&z=19&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                    </iframe>
+                    <a href="https://putlocker-is.org"></a><br>
+                    <style>.mapouter{position:relative;text-align:right;height:725px;width:600px;}</style>
+                    <a href="https://www.embedgooglemap.net"></a>
+                    <style>.gmap_canvas {overflow:hidden;background:none!important;height:725px;width:600px;}</style>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+    
+    <script src="js/validate.js"></script>
+    <script src="js/cep.js"></script>
+    
+</body>
+</html>
